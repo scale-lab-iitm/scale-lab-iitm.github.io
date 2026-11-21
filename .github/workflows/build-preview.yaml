@@ -10,7 +10,9 @@ permissions:
 
 jobs:
   build-preview:
-    runs-on: ubuntu-latest
+    # pinned: gem install started failing after ubuntu-latest moved to 26.04 (GCC 15) in Nov 2026;
+    # 24.04 is the last image the old gems in Gemfile.lock built on. Unpin once Gemfile.lock is updated.
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout PR branch contents
@@ -25,6 +27,10 @@ jobs:
         if: github.event.action != 'closed'
         # runs potentially untrusted code
         uses: ruby/setup-ruby@v1
+        env:
+          # see build-site.yaml: lets old C extensions in Gemfile.lock compile with newer compilers
+          BUNDLE_BUILD__POSIX___SPAWN: "--with-cflags=-Wno-error=incompatible-pointer-types -Wno-error=incompatible-function-pointer-types -Wno-error=int-conversion -Wno-error=implicit-function-declaration"
+          BUNDLE_BUILD__EVENTMACHINE: "--with-cflags=-Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-function-declaration"
         with:
           ruby-version: "3.1"
           bundler-cache: true

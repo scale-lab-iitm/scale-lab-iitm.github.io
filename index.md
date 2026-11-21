@@ -41,7 +41,14 @@ Control and optimization methods for tokamaks, including density regulation, pro
 
 ## Connect with SCaLe Lab
 
-Interested in our research, in joining the lab, or in exploring a collaboration? Get in touch.
+Interested in joining the lab? See the open positions page. For questions about our research or to explore a collaboration, get in touch.
+
+{%
+  include button.html
+  link="positions"
+  text="Open positions"
+  icon="fa-solid fa-user-plus"
+%}
 
 {%
   include button.html

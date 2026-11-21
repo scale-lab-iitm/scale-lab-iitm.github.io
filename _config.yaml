@@ -12,7 +12,7 @@ proofer: false
 
 # site social media and other links
 links:
-  email: saitejp@iitm.ac.in
+  email: saitejp@smail.iitm.ac.in
   github: scale-lab-iitm
 
 ### jekyll settings

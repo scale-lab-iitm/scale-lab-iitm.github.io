@@ -49,7 +49,21 @@
       | sort: "nav.order"
     %}
     {% for page in pages %}
-      {% if page.nav %}
+      {% if page.nav and page.nav.children %}
+        <div class="nav-item">
+          <a href="{{ page.dir | relative_url | uri_escape }}" aria-haspopup="true">
+            {{ page.title }}
+            <i class="nav-caret fa-solid fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div class="nav-menu">
+            {% for child in page.nav.children %}
+              <a href="{{ child.link | relative_url | uri_escape }}">
+                {{ child.title }}
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% elsif page.nav %}
         <a
           href="{{ page.dir | relative_url | uri_escape }}"
           data-tooltip="{{ page.nav.tooltip | xml_escape }}"

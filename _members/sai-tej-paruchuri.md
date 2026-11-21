@@ -5,7 +5,7 @@ role: principal-investigator
 description: Assistant Professor
 affiliation: Mechanical Engineering, IIT Madras
 links:
-  email: saitejp@iitm.ac.in
+  email: saitejp@smail.iitm.ac.in
   home-page: https://saitejp.github.io
   google-scholar: rxMB0HAAAAAJ
   linkedin: saitejparuchuri

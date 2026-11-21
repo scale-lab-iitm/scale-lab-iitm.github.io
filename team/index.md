@@ -19,4 +19,4 @@ nav:
 
 {% include list.html data="members" component="portrait" filter="role != 'principal-investigator'" %}
 
-Interested in joining? See the [contact page]({{ "contact" | relative_url }}).
+Interested in joining? See the [open positions page]({{ "positions" | relative_url }}).

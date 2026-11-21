@@ -20,6 +20,19 @@
   box-shadow: var(--shadow);
 }
 
+// diagrams on a transparent background: no frame, so they blend into the page
+.figure-plain .figure-image img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: none;
+}
+
+// light/dark versions of the same figure; only the one matching the current mode is shown
+html:not([data-dark="true"]) .show-dark,
+html[data-dark="true"] .show-light {
+  display: none;
+}
+
 .figure-caption {
   font-style: italic;
   text-align: center;

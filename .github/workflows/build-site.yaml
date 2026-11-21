@@ -16,9 +16,7 @@ permissions:
 
 jobs:
   build-site:
-    # pinned: gem install started failing after ubuntu-latest moved to 26.04 (GCC 15) in Nov 2026;
-    # 24.04 is the last image the old gems in Gemfile.lock built on. Unpin once Gemfile.lock is updated.
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main branch contents
@@ -26,13 +24,8 @@ jobs:
 
       - name: Install Ruby packages
         uses: ruby/setup-ruby@v1
-        env:
-          # newer compilers treat these warnings as errors, which breaks building the
-          # old posix-spawn and eventmachine C extensions pinned in Gemfile.lock
-          BUNDLE_BUILD__POSIX___SPAWN: "--with-cflags=-Wno-error=incompatible-pointer-types -Wno-error=incompatible-function-pointer-types -Wno-error=int-conversion -Wno-error=implicit-function-declaration"
-          BUNDLE_BUILD__EVENTMACHINE: "--with-cflags=-Wno-error=incompatible-pointer-types -Wno-error=int-conversion -Wno-error=implicit-function-declaration"
         with:
-          ruby-version: "3.1"
+          ruby-version: "4.0"
           bundler-cache: true
 
       - name: Get Pages URL

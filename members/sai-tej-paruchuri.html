@@ -260,6 +260,10 @@
   
 
   
+    <link href="/_styles/research.css" rel="stylesheet">
+  
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -362,9 +366,27 @@
     
     
       
-        <a href="/research/" data-tooltip="Control, estimation, learning, and plasma applications">
-          Research
-        </a>
+        <div class="nav-item">
+          <a href="/research/" aria-haspopup="true">
+            Research
+            <i class="nav-caret fa-solid fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div class="nav-menu">
+            
+              <a href="/research/">
+                Overview
+              </a>
+            
+              <a href="/research/ongoing/">
+                Ongoing research
+              </a>
+            
+              <a href="/research/past/">
+                Past research
+              </a>
+            
+          </div>
+        </div>
       
     
       
@@ -382,6 +404,12 @@
       
         <a href="/news/" data-tooltip="Lab news and updates">
           News
+        </a>
+      
+    
+      
+        <a href="/positions/" data-tooltip="Opportunities to join the lab">
+          Open Positions
         </a>
       
     
@@ -451,7 +479,7 @@
 
 
   <div class="button-wrapper">
-    <a class="button" href="mailto:saitejp@iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
+    <a class="button" href="mailto:saitejp@smail.iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
       <i class="icon fa-solid fa-envelope"></i>
       
         <span>Email</span>
@@ -525,27 +553,6 @@
 <p>A central motivation of my work is to connect theoretical developments with applications to complex engineering systems. Much of my research has focused on the control of magnetically confined fusion plasmas, including control methods evaluated experimentally on tokamaks such as DIII-D (USA), KSTAR (South Korea), and TCV (Switzerland). This work includes the application of reinforcement learning to plasma control. Earlier in my career, I worked on modeling and estimation of piezoelectric and smart-material structures for vibration attenuation.</p>
 
 <p>Before joining IIT Madras, I was a Research Scientist and, previously, a Postdoctoral Research Associate at the Plasma Control Laboratory in the Department of Mechanical Engineering and Mechanics at Lehigh University, USA. I received my Ph.D. in Mechanical Engineering and M.S. in Mathematics from Virginia Tech.</p>
-
-
-
-
-
-
-<p class="center">
-  <a href="/research/?search=%22Sai%20Tej%20Paruchuri%22%20">
-    Search for Sai Tej Paruchuri's papers on the Research page
-  </a>
-</p>
-
-
-
-<!--
-<p class="center">
-  <a href="/blog/?search=Sai%20Tej%20Paruchuri">
-    See Sai Tej Paruchuri's posts on the Blog page
-  </a>
-</p>
--->
   </section>
 
 
@@ -569,7 +576,7 @@
 
 
   <div class="button-wrapper">
-    <a class="button" href="mailto:saitejp@iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
+    <a class="button" href="mailto:saitejp@smail.iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
       <i class="icon fa-solid fa-envelope"></i>
       
     </a>
@@ -597,10 +604,6 @@
   <div>
     © 2026
     SCaLe Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
   </div>
 
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">

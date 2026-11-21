@@ -260,6 +260,10 @@
   
 
   
+    <link href="/_styles/research.css" rel="stylesheet">
+  
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -416,9 +420,27 @@
     
     
       
-        <a href="/research/" data-tooltip="Control, estimation, learning, and plasma applications">
-          Research
-        </a>
+        <div class="nav-item">
+          <a href="/research/" aria-haspopup="true">
+            Research
+            <i class="nav-caret fa-solid fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div class="nav-menu">
+            
+              <a href="/research/">
+                Overview
+              </a>
+            
+              <a href="/research/ongoing/">
+                Ongoing research
+              </a>
+            
+              <a href="/research/past/">
+                Past research
+              </a>
+            
+          </div>
+        </div>
       
     
       
@@ -436,6 +458,12 @@
       
         <a href="/news/" data-tooltip="Lab news and updates">
           News
+        </a>
+      
+    
+      
+        <a href="/positions/" data-tooltip="Opportunities to join the lab">
+          Open Positions
         </a>
       
     
@@ -505,7 +533,7 @@
 
 
   <div class="button-wrapper">
-    <a class="button" href="mailto:saitejp@iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
+    <a class="button" href="mailto:saitejp@smail.iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
       <i class="icon fa-solid fa-envelope"></i>
       
     </a>
@@ -533,10 +561,6 @@
   <div>
     © 2026
     SCaLe Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
   </div>
 
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">

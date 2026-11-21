@@ -115,6 +115,72 @@ nav > a:hover {
   color: var(--primary);
 }
 
+html {
+  scroll-padding-top: 110px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+}
+
+.nav-item > a:hover {
+  color: var(--primary);
+}
+
+.nav-caret {
+  font-size: 0.8em;
+  transition: transform var(--transition);
+}
+
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+  padding: 8px 0;
+  background: var(--background);
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow), 0 4px 16px var(--overlay);
+  text-transform: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+.nav-menu > a {
+  padding: 8px 18px;
+  white-space: nowrap;
+}
+
+.nav-menu > a:hover,
+.nav-menu > a:focus-visible {
+  color: var(--primary);
+  background: var(--background-alt);
+}
+
+.nav-item:hover > .nav-menu,
+.nav-item:focus-within > .nav-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.nav-item:hover .nav-caret,
+.nav-item:focus-within .nav-caret {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 700px) {
   header:not([data-big]) {
     justify-content: flex-end;
@@ -129,6 +195,35 @@ nav > a:hover {
     align-items: flex-end;
     flex-direction: column;
     width: 100%;
+  }
+  header:not([data-big]) .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  header:not([data-big]) .nav-caret {
+    display: none;
+  }
+  header:not([data-big]) .nav-menu {
+    position: static;
+    min-width: 0;
+    padding: 0 0 4px;
+    background: none;
+    box-shadow: none;
+    font-size: 0.9em;
+    text-align: right;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  header:not([data-big]) .nav-menu > a {
+    padding: 4px 5px;
+    color: var(--dark-gray);
+    white-space: normal;
+  }
+  header:not([data-big]) .nav-menu > a:hover {
+    background: none;
   }
 }
 

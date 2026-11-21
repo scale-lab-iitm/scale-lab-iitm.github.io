@@ -260,6 +260,10 @@
   
 
   
+    <link href="/_styles/research.css" rel="stylesheet">
+  
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -416,9 +420,27 @@
     
     
       
-        <a href="/research/" data-tooltip="Control, estimation, learning, and plasma applications">
-          Research
-        </a>
+        <div class="nav-item">
+          <a href="/research/" aria-haspopup="true">
+            Research
+            <i class="nav-caret fa-solid fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div class="nav-menu">
+            
+              <a href="/research/">
+                Overview
+              </a>
+            
+              <a href="/research/ongoing/">
+                Ongoing research
+              </a>
+            
+              <a href="/research/past/">
+                Past research
+              </a>
+            
+          </div>
+        </div>
       
     
       
@@ -436,6 +458,12 @@
       
         <a href="/news/" data-tooltip="Lab news and updates">
           News
+        </a>
+      
+    
+      
+        <a href="/positions/" data-tooltip="Opportunities to join the lab">
+          Open Positions
         </a>
       
     
@@ -474,10 +502,10 @@
 <p>Assistant Professor, Department of Mechanical Engineering</p>
 
 <div class="button-wrapper">
-    <a class="button" href="mailto:saitejp@iitm.ac.in" data-tooltip="Email" data-style="" aria-label="Email">
+    <a class="button" href="mailto:saitejp@smail.iitm.ac.in" data-tooltip="Email" data-style="" aria-label="Email">
       <i class="icon fa-solid fa-envelope"></i>
       
-        <span>saitejp@iitm.ac.in</span>
+        <span>saitejp@smail.iitm.ac.in</span>
       
     </a>
   </div>
@@ -489,24 +517,6 @@ Department of Mechanical Engineering<br>
 Indian Institute of Technology Madras<br>
 Chennai 600036, Tamil Nadu<br>
 India</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="prospective-students">Prospective students</h2>
-
-<p>If you are interested in nonlinear control, estimation, kernel methods, reinforcement learning, or fusion plasma control, please get in touch to discuss research interests. Introduce your background, describe the topics you would like to explore, and include a CV and any relevant research or project experience.</p>
-
-<p>Specific advertised positions and application instructions will be listed here when available.</p>
   </section>
 
 
@@ -530,7 +540,7 @@ India</p>
 
 
   <div class="button-wrapper">
-    <a class="button" href="mailto:saitejp@iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
+    <a class="button" href="mailto:saitejp@smail.iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
       <i class="icon fa-solid fa-envelope"></i>
       
     </a>
@@ -558,10 +568,6 @@ India</p>
   <div>
     © 2026
     SCaLe Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
   </div>
 
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">

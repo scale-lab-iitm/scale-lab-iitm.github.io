@@ -6,6 +6,26 @@ span.icon {
   line-height: 1;
 }
 
+.icon-converging-error {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: -0.35em;
+  background-color: currentColor;
+  -webkit-mask: url("/images/icons/converging-error.svg") center/contain no-repeat;
+  mask: url("/images/icons/converging-error.svg") center/contain no-repeat;
+}
+
+.icon-sum-of-kernels {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: -0.35em;
+  background-color: currentColor;
+  -webkit-mask: url("/images/icons/sum-of-kernels.svg") center/contain no-repeat;
+  mask: url("/images/icons/sum-of-kernels.svg") center/contain no-repeat;
+}
+
 span.icon > svg {
   position: relative;
   top: 0.1em;

@@ -260,6 +260,10 @@
   
 
   
+    <link href="/_styles/research.css" rel="stylesheet">
+  
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -416,9 +420,27 @@
     
     
       
-        <a href="/research/" data-tooltip="Control, estimation, learning, and plasma applications">
-          Research
-        </a>
+        <div class="nav-item">
+          <a href="/research/" aria-haspopup="true">
+            Research
+            <i class="nav-caret fa-solid fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <div class="nav-menu">
+            
+              <a href="/research/">
+                Overview
+              </a>
+            
+              <a href="/research/ongoing/">
+                Ongoing research
+              </a>
+            
+              <a href="/research/past/">
+                Past research
+              </a>
+            
+          </div>
+        </div>
       
     
       
@@ -436,6 +458,12 @@
       
         <a href="/news/" data-tooltip="Lab news and updates">
           News
+        </a>
+      
+    
+      
+        <a href="/positions/" data-tooltip="Opportunities to join the lab">
+          Open Positions
         </a>
       
     
@@ -469,7 +497,32 @@
     <h1 id="research">
 <i class="icon fa-solid fa-microscope"></i>Research</h1>
 
-<p>Our research lies at the intersection of control theory, estimation, and machine learning. We develop methods for nonlinear dynamical systems, with particular attention to rigorous analysis and engineering applications.</p>
+<div class="figure-plain show-light">
+<figure class="figure">
+  <a class="figure-image" aria-label="figure link">
+    <img src="/images/research-overview.png" style="
+        width: 450px;
+        max-height: unset;
+      " alt="Core research at the intersection of Control Estimation and Approximation Learning, applied to complex systems: plasmas, structures, and robotics." loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  </a>
+  
+</figure>
+
+</div>
+<div class="figure-plain show-dark">
+<figure class="figure">
+  <a class="figure-image" aria-label="figure link">
+    <img src="/images/research-overview-dark.png" style="
+        width: 450px;
+        max-height: unset;
+      " alt="Core research at the intersection of Control Estimation and Approximation Learning, applied to complex systems: plasmas, structures, and robotics." loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  </a>
+  
+</figure>
+
+</div>
+
+<p>Our research lies at the intersection of control theory, estimation, and machine learning. We develop methods for nonlinear dynamical systems with rigorous guarantees, and apply them to complex engineering systems.</p>
   </section>
 
   
@@ -483,21 +536,32 @@
   <size></size>
 -->
 
-<h2 id="nonlinear-and-adaptive-control">Nonlinear and adaptive control</h2>
+<h2 id="core-research">Core research</h2>
 
-<p>We study nonlinear, adaptive, optimal, and robust control, including feedback design under individual actuator constraints. A central interest is connecting controller design with stability guarantees and practical implementation.</p>
+<h3 id="control--estimation">Control &amp; Estimation</h3>
 
-<h2 id="kernel-methods-and-estimation">Kernel methods and estimation</h2>
+<p>We study estimation and control of systems governed by nonlinear differential equations in the presence of uncertainties, with rigorous guarantees.</p>
 
-<p>Reproducing kernel Hilbert space (RKHS) methods provide a framework for nonparametric estimation and adaptive control. Our interests include online estimation, persistence of excitation, convergence analysis, and kernel representations of nonlinear dynamics.</p>
+<h3 id="approximation--learning">Approximation &amp; Learning</h3>
 
-<h2 id="learning-for-dynamical-systems">Learning for dynamical systems</h2>
+<p>We leverage tools from approximation and learning theory, such as reproducing kernel Hilbert spaces, for dynamical system uncertainty approximation with provable convergence.</p>
 
-<p>Research interests include reinforcement learning for feedback control, adaptive dynamic programming, Koopman operator methods, and machine learning surrogate models for control and optimization.</p>
+<h3 id="where-they-meet">Where they meet</h3>
 
-<h2 id="fusion-plasma-control">Fusion plasma control</h2>
+<p>Our core research sits at the overlap: learning-based controllers and estimators that retain provable stability and convergence guarantees.</p>
 
-<p>Applications include plasma density regulation, safety-factor and temperature profile control, disruption avoidance, and allocation of shared actuators. Sai Tej Paruchuri’s prior collaborative experimental work includes DIII-D, KSTAR, and TCV.</p>
+<div class="research-apps">
+  <div class="research-app">
+    <i class="icon-converging-error" aria-hidden="true"></i>
+    <h3>Kernel-based adaptive control</h3>
+    <p>Adaptive controllers that learn unknown nonlinearities online in reproducing kernel Hilbert spaces, with guaranteed convergence of the tracking error.</p>
+  </div>
+  <div class="research-app">
+    <i class="icon-sum-of-kernels" aria-hidden="true"></i>
+    <h3>Function estimation in native spaces</h3>
+    <p>Learning unknown functions and operators from trajectory data, with conditions for convergence and rates of approximation.</p>
+  </div>
+</div>
   </section>
 
   
@@ -510,6 +574,98 @@
   <dark></dark>
   <size></size>
 -->
+
+<h2 id="complex-systems">Complex systems</h2>
+
+<p>We bring these methods to complex engineering systems, where nonlinear dynamics, uncertainty, and limited actuation make control challenging.</p>
+
+<div class="research-apps" data-cols="3">
+  <div class="research-app">
+    <i class="fa-solid fa-atom" aria-hidden="true"></i>
+    <h3>Plasmas</h3>
+    <p>Control of fusion plasmas in tokamaks, from density and profile regulation to disruption avoidance.</p>
+  </div>
+  <div class="research-app">
+    <i class="fa-solid fa-robot" aria-hidden="true"></i>
+    <h3>Robotics</h3>
+    <p>Learning-based control of robotic systems with stability and safety guarantees.</p>
+  </div>
+  <div class="research-app">
+    <i class="fa-solid fa-wave-square" aria-hidden="true"></i>
+    <h3>Structures</h3>
+    <p>Modeling and estimation of piezoelectric and smart-material structures for vibration attenuation.</p>
+  </div>
+</div>
+  </section>
+
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
+
+<h2 id="our-projects">Our projects</h2>
+
+<p>See what the lab is working on now, and the earlier research it builds on.</p>
+
+<div class="button-wrapper">
+    <a class="button" href="/research/ongoing" data-style="" aria-label="fa-solid fa-flask">
+      <i class="icon fa-solid fa-flask"></i>
+      
+        <span>Ongoing research</span>
+      
+    </a>
+  </div>
+
+<div class="button-wrapper">
+    <a class="button" href="/research/past" data-style="" aria-label="fa-solid fa-clock-rotate-left">
+      <i class="icon fa-solid fa-clock-rotate-left"></i>
+      
+        <span>Past research</span>
+      
+    </a>
+  </div>
+  </section>
+
+  
+  
+  
+
+  <section class="background" data-size="page">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+-->
+
+<h2 id="working-with-us">Working with us</h2>
+
+<p><strong>Students:</strong> Interested in these problems? See the open positions page for current opportunities and how to get in touch.</p>
+
+<p><strong>Collaborators:</strong> We welcome collaborations with researchers in academia, national labs and industry on control, estimation, and learning for complex systems. Please reach out through the contact page.</p>
+
+<div class="button-wrapper">
+    <a class="button" href="/positions" data-style="" aria-label="fa-solid fa-user-plus">
+      <i class="icon fa-solid fa-user-plus"></i>
+      
+        <span>Open positions</span>
+      
+    </a>
+  </div>
+
+<div class="button-wrapper">
+    <a class="button" href="/contact" data-style="" aria-label="fa-regular fa-envelope">
+      <i class="icon fa-regular fa-envelope"></i>
+      
+        <span>Contact</span>
+      
+    </a>
+  </div>
 
 <div class="button-wrapper">
     <a class="button" href="/publications" data-style="" aria-label="fa-solid fa-scroll">
@@ -542,7 +698,7 @@
 
 
   <div class="button-wrapper">
-    <a class="button" href="mailto:saitejp@iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
+    <a class="button" href="mailto:saitejp@smail.iitm.ac.in" data-tooltip="Email" data-style="bare" aria-label="Email">
       <i class="icon fa-solid fa-envelope"></i>
       
     </a>
@@ -570,10 +726,6 @@
   <div>
     © 2026
     SCaLe Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
   </div>
 
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
